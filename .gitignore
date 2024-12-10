@@ -3,7 +3,7 @@ import keyboard
 # Function to handle custom keybind
 def on_key_event(event):
     if event.name == "a":
-        print("Key 'A' pressed!")
+        print("Key 'p' pressed!")
     elif event.name == "b":
         print("Key 'B' pressed!")
     elif event.name == "esc":
