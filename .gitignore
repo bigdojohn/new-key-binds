@@ -1,37 +1,17 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+import keyboard
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+# Function to handle custom keybind
+def on_key_event(event):
+    if event.name == "a":
+        print("Key 'A' pressed!")
+    elif event.name == "b":
+        print("Key 'B' pressed!")
+    elif event.name == "esc":
+        print("Escape pressed. Exiting...")
+        exit()
 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
+# Set the keybinds
+keyboard.on_press(on_key_event)
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Start listening for keyboard events
+keyboard.wait('esc')  # Exits when escape key is pressed
